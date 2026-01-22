@@ -28,7 +28,7 @@ The system follows a modular **Microservices-inspired Architecture**, separating
 6.  **Visualization**: Streamlit renders the JSON data into interactive metrics, charts, and summary cards.
 
 ### Architecture Diagram
-```mermaid
+```
 graph TD
     User[User] -->|Input Stock Symbol| UI[Streamlit Frontend]
     UI -->|Request Data| Fetcher[News Fetcher Module]
