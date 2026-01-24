@@ -20,7 +20,12 @@ def analyze_sentiment(articles: list[dict], stock: str) -> dict:
         for article in articles
     ])
     
-    prompt = f"""You are an expert financial analyst. Analyze the following news articles about {stock} and provide investment sentiment analysis.
+    prompt = f"""You are an expert financial analyst. Analyze the following news articles about {stock} and provide investment sentiment analysis and base you evalauation on below topics:
+    Financial Performance Metrics
+Profitability: Net Profit Margin, Gross Profit Margin, Earnings Per Share (EPS), and Return on Equity (ROE).
+Liquidity: Current Ratio and Quick Ratio, which measure the ability to meet short-term obligations.
+Solvency/Leverage: Debt-to-Equity Ratio, assessing long-term debt management.
+Efficiency: Inventory Turnover and Accounts Receivable Turnover. 
 
 NEWS ARTICLES:
 {news_text}
